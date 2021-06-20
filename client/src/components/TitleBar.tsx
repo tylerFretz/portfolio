@@ -26,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
 	title: {
 		textAlign: 'center',
 		flex: '1 1',
-		opacity: 0.8
+		opacity: 0.8,
+		userSelect: 'none'
 	},
 	titleBarSubContainer: {
 		display: 'flex',
@@ -40,12 +41,13 @@ const useStyles = makeStyles((theme) => ({
 		flex: '1 1',
 		alignItems: 'center',
 		justifyContent: 'flex-end',
-		marginLeft: 'auto'
+		marginLeft: 'auto',
 	},
 	titleBarItem: {
 		lineHeight: 0,
 		padding: '0 .5rem',
 		opacity: 0.8,
+		userSelect: 'none',
 		'&:hover': {
 			opacity: 1,
 			background: 'rgba(243, 184, 184, .2)'
@@ -67,7 +69,7 @@ const TitleBar = () => {
 	const items = ['File', 'Edit', 'View', 'Go', 'Run', 'Terminal', 'Help'];
 
 	return (
-		<div className={classes.root}>
+		<section className={classes.root}>
 			<div className={classes.titleBarSubContainer}>
 				<img className={classes.logo} alt='vsCode Icon' src={vsCodeLogo} />
 				<Hidden smDown>
@@ -90,7 +92,7 @@ const TitleBar = () => {
 					<CloseIcon />
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

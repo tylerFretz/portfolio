@@ -8,31 +8,28 @@ import { useTabState, useTabActions } from '../contexts/TabContext';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
+		width: '100%',
 		display: 'flex',
-		padding: '0 1.4rem',
+		margin: '5% 0%',
 		justifyContent: 'center',
 		alignItems: 'center',
 		color: theme.palette.primary.contrastText,
 		height: theme.spacing(5),
-		borderLeft: `1px solid ${theme.palette.primary.main}`,
-		borderRight: `1px solid ${theme.palette.primary.main}`,
-		cursor: 'pointer'
+		cursor: 'pointer',
+		userSelect: 'none',
 	},
 	logo: {
-		width: theme.spacing(2),
-		height: theme.spacing(2),
-		marginRight: theme.spacing(1)
+		width: theme.spacing(3),
+		height: theme.spacing(3),
 	}
 }));
 
 interface TabProps {
-	title: string,
 	value: string,
 	logoSrc: string | undefined,
 }
 
 const Tab = ({
-	title,
 	value,
 	logoSrc,
 }: TabProps) => {
@@ -53,11 +50,17 @@ const Tab = ({
 			className={classes.root}
 			onClick={handleClick}
 			style={{
-				backgroundColor: open ? theme.palette.secondary.main : theme.palette.primary.main,
-				borderTop: open ? '1px solid #FFD700' : '1px solid #1F2428'
+				backgroundColor: open ? theme.palette.primary.main : theme.palette.secondary.main,
+				borderLeft: open ? '1px solid #FFD700' : '1px solid #1F2428'
 			}}>
-			<img className={classes.logo} src={logoSrc} alt='tab icon' />
-			<p style={{ opacity: open ? 1 : 0.7, userSelect: 'none' }}>{title}</p>
+			<img
+				className={classes.logo}
+				style={{
+					opacity: open ? 1 : 0.7
+				}}
+				src={logoSrc}
+				alt='sidebar tab icon'
+			/>
 		</div>
 	);
 };
