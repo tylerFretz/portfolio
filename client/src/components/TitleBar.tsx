@@ -13,10 +13,10 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: 'center',
 		color: theme.palette.primary.contrastText,
 		backgroundColor: theme.palette.primary.main,
-		height: theme.spacing(3),
+		height: '3vh',
 		paddingLeft: '.5rem',
 		fontSize: '0.85rem',
-		borderBottom: '1px solid #000'
+		borderBottom: '1px solid #112121'
 	},
 	logo: {
 		width: theme.spacing(2.5),
@@ -36,12 +36,12 @@ const useStyles = makeStyles((theme) => ({
 		marginRight: 'auto',
 		height: '100%'
 	},
-	widowItemsContainer: {
+	windowItemsContainer: {
 		display: 'flex',
 		flex: '1 1',
 		alignItems: 'center',
 		justifyContent: 'flex-end',
-		marginLeft: 'auto',
+		marginLeft: 'auto'
 	},
 	titleBarItem: {
 		lineHeight: 0,
@@ -81,7 +81,7 @@ const TitleBar = () => {
 				</Hidden>
 			</div>
 			<p className={classes.title}>Tyler Fretz - Software Developer</p>
-			<div className={classes.widowItemsContainer}>
+			<div className={classes.windowItemsContainer}>
 				<div className={classes.titleBarItem}>
 					<MinimizeIcon />
 				</div>

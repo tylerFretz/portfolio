@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { useTabState, useTabActions } from '../contexts/TabContext';
 
 
@@ -10,13 +10,15 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		width: '100%',
 		display: 'flex',
-		margin: '5% 0%',
 		justifyContent: 'center',
 		alignItems: 'center',
 		color: theme.palette.primary.contrastText,
-		height: theme.spacing(5),
+		height: theme.spacing(6),
 		cursor: 'pointer',
 		userSelect: 'none',
+		'&:hover': {
+			background: 'rgba(250, 249, 249, 0.05)'
+		}
 	},
 	logo: {
 		width: theme.spacing(3),
@@ -34,7 +36,6 @@ const Tab = ({
 	logoSrc,
 }: TabProps) => {
 	const classes = useStyles();
-	const theme = useTheme();
 	const history = useHistory();
 	const { currentTab } = useTabState();
 	const { setCurrentTab } = useTabActions();
@@ -49,15 +50,10 @@ const Tab = ({
 		<div
 			className={classes.root}
 			onClick={handleClick}
-			style={{
-				backgroundColor: open ? theme.palette.primary.main : theme.palette.secondary.main,
-				borderLeft: open ? '1px solid #FFD700' : '1px solid #1F2428'
-			}}>
+			style={{ borderLeft: open ? '1px solid #FFD700' : '1px solid #1F2428' }}>
 			<img
 				className={classes.logo}
-				style={{
-					opacity: open ? 1 : 0.7
-				}}
+				style={{ opacity: open ? 1 : 0.5 }}
 				src={logoSrc}
 				alt='sidebar tab icon'
 			/>

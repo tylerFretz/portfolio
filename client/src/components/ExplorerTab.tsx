@@ -2,19 +2,21 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { useTabState, useTabActions } from '../contexts/TabContext';
-
 
 const useStyles = makeStyles((theme) => ({
 	root: {
+		width: '100%',
 		display: 'flex',
-		padding: '0 1.4rem',
-		justifyContent: 'center',
+		paddingLeft: '1.5rem',
 		alignItems: 'center',
 		color: theme.palette.primary.contrastText,
-		height: theme.spacing(5),
-		cursor: 'pointer'
+		cursor: 'pointer',
+		userSelect: 'none',
+		'&:hover': {
+			background: 'rgba(250, 249, 249, 0.05)'
+		}
 	},
 	logo: {
 		width: theme.spacing(2),
@@ -29,13 +31,12 @@ interface TabProps {
 	logoSrc: string | undefined,
 }
 
-const Tab = ({
+const ExplorerTab = ({
 	title,
 	value,
 	logoSrc,
 }: TabProps) => {
 	const classes = useStyles();
-	const theme = useTheme();
 	const history = useHistory();
 	const { currentTab } = useTabState();
 	const { setCurrentTab } = useTabActions();
@@ -47,17 +48,16 @@ const Tab = ({
 	};
 
 	return (
-		<div
-			className={classes.root}
-			onClick={handleClick}
-			style={{
-				backgroundColor: open ? theme.palette.secondary.main : theme.palette.primary.main,
-				borderTop: open ? '1px solid #FFD700' : '1px solid #1F2428'
-			}}>
-			<img className={classes.logo} src={logoSrc} alt='tab icon' />
-			<p style={{ opacity: open ? 1 : 0.7, userSelect: 'none' }}>{title}</p>
+		<div className={classes.root} onClick={handleClick}>
+			<img
+				className={classes.logo}
+				src={logoSrc}
+				alt='File explorer tab icon'
+			/>
+			<p style={{ opacity: open ? 1 : 0.6, userSelect: 'none', lineHeight: 0 }}>{title}</p>
 		</div>
 	);
 };
 
-export default Tab;
+
+export default ExplorerTab;

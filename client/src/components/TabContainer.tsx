@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
 		background: theme.palette.primary.main
 	},
 	sideBar: {
-		height: '90vh',
 		width: '4vw',
 		display: 'flex',
 		flexDirection: 'column',
@@ -33,32 +32,32 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
+const tabsBarTabs = [
+	{ title: 'home.tsx', value: 'home', logoSrc: reactIcon },
+	{ title: 'about.html', value: 'about', logoSrc: htmlIcon },
+	{ title: 'contact.css', value: 'contact', logoSrc: cssIcon },
+	{ title: 'projects.ts', value: 'projects', logoSrc: tsIcon },
+	{ title: 'github.md', value: 'github', logoSrc: markDownIcon }
+];
+
+const sideBarTopTabs = [
+	{ value: 'home', logoSrc: explorerIcon },
+	{ value: 'github', logoSrc: gitHubLogo },
+	{ value: 'projects', logoSrc: codeIcon },
+	{ value: 'contact', logoSrc: mailIcon },
+];
+
+const sideBarBottomTabs = [
+	{ value: 'about', logoSrc: accountsIcon },
+	{ value: 'settings', logoSrc: manageIcon }
+];
+
 interface Props {
 	isSideBar: boolean
 }
 
 const TabContainer: React.FC<Props> = ({ isSideBar }) => {
 	const classes = useStyles();
-
-	const tabsBarTabs = [
-		{ title: 'home.tsx', value: 'home', logoSrc: reactIcon },
-		{ title: 'about.html', value: 'about', logoSrc: htmlIcon },
-		{ title: 'contact.css', value: 'contact', logoSrc: cssIcon },
-		{ title: 'projects.css', value: 'projects', logoSrc: tsIcon },
-		{ title: 'github.md', value: 'github', logoSrc: markDownIcon }
-	];
-
-	const sideBarTopTabs = [
-		{ value: 'home', logoSrc: explorerIcon },
-		{ value: 'github', logoSrc: gitHubLogo },
-		{ value: 'projects', logoSrc: codeIcon },
-		{ value: 'contact', logoSrc: mailIcon },
-	];
-
-	const sideBarBottomTabs = [
-		{ value: 'about', logoSrc: accountsIcon },
-		{ value: 'settings', logoSrc: manageIcon }
-	];
 
 	return isSideBar
 		? (

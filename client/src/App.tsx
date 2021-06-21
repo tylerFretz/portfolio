@@ -3,6 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import TitleBar from './components/TitleBar';
 import TabContainer from './components/TabContainer';
+import Explorer from './components/Explorer';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -14,7 +16,11 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		display: 'flex',
 		background: theme.palette.primary.main,
-		minHeight: '100vh'
+		height: '95vh'
+	},
+	main: {
+		width: '100%',
+		background: theme.palette.secondary.main
 	}
 }));
 
@@ -26,7 +32,8 @@ function App() {
 			<TitleBar />
 			<div className={classes.root}>
 				<TabContainer isSideBar={false} />
-				<div style={{ width: '100%' }}>
+				<Explorer />
+				<div className={classes.main}>
 					<TabContainer isSideBar={true} />
 					<Switch>
 						<Route exact path='/projects' component={Projects} />
@@ -38,6 +45,7 @@ function App() {
 					</Switch>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };
