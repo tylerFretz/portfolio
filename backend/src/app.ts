@@ -4,6 +4,7 @@ import cors from "cors";
 const db = require('./utils/db_helper');
 const middleware = require("./utils/middleware");
 import projectsRouter from "./controllers/projects";
+import contactRouter from "./controllers/contact";
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(middleware.requestLogger);
 app.use(middleware.tokenExtractor);
 
 app.use('/api/projects', projectsRouter);
+app.use('/api/contact', contactRouter);
 
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
