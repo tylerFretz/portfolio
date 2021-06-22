@@ -28,7 +28,11 @@ const useStyles = makeStyles((theme) => ({
 		flexDirection: 'column',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-		background: theme.palette.secondary.main
+		background: theme.palette.secondary.main,
+		[theme.breakpoints.down('sm')]: {
+			width: '10vw',
+			borderRight: '1px solid #112121'
+		}
 	}
 }));
 
@@ -41,15 +45,15 @@ const tabsBarTabs = [
 ];
 
 const sideBarTopTabs = [
-	{ value: 'home', logoSrc: explorerIcon },
-	{ value: 'github', logoSrc: gitHubLogo },
-	{ value: 'projects', logoSrc: codeIcon },
-	{ value: 'contact', logoSrc: mailIcon },
+	{ title: 'home.tsx', value: 'home', logoSrc: explorerIcon },
+	{ title: 'github.md', value: 'github', logoSrc: gitHubLogo },
+	{ title: 'projects.ts', value: 'projects', logoSrc: codeIcon },
+	{ title: 'contact.css', value: 'contact', logoSrc: mailIcon },
 ];
 
 const sideBarBottomTabs = [
-	{ value: 'about', logoSrc: accountsIcon },
-	{ value: 'settings', logoSrc: manageIcon }
+	{ title: 'about.html', value: 'about', logoSrc: accountsIcon },
+	{ title: 'settings.json', value: 'settings', logoSrc: manageIcon }
 ];
 
 interface Props {
@@ -61,6 +65,29 @@ const TabContainer: React.FC<Props> = ({ isSideBar }) => {
 
 	return isSideBar
 		? (
+			<div className={classes.sideBar}>
+				<div>
+					{sideBarTopTabs.map((tab) => (
+						<SideBarTab
+							key={tab.value}
+							value={tab.value}
+							title={tab.title}
+							logoSrc={tab.logoSrc}
+						/>
+					))}
+				</div>
+				<div>
+					{sideBarBottomTabs.map((tab) => (
+						<SideBarTab
+							key={tab.value}
+							value={tab.value}
+							title={tab.title}
+							logoSrc={tab.logoSrc}
+						/>
+					))}
+				</div>
+			</div>
+		) : (
 			<div className={classes.tabsBar}>
 				{tabsBarTabs.map((tab) => (
 					<Tab
@@ -70,28 +97,6 @@ const TabContainer: React.FC<Props> = ({ isSideBar }) => {
 						logoSrc={tab.logoSrc}
 					/>
 				))}
-			</div>
-		) :
-		(
-			<div className={classes.sideBar}>
-				<div style={{ width: '4vw' }}>
-					{sideBarTopTabs.map((tab) => (
-						<SideBarTab
-							key={tab.value}
-							value={tab.value}
-							logoSrc={tab.logoSrc}
-						/>
-					))}
-				</div>
-				<div style={{ width: '4vw' }}>
-					{sideBarBottomTabs.map((tab) => (
-						<SideBarTab
-							key={tab.value}
-							value={tab.value}
-							logoSrc={tab.logoSrc}
-						/>
-					))}
-				</div>
 			</div>
 		);
 };

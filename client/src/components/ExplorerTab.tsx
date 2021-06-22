@@ -40,10 +40,10 @@ const ExplorerTab = ({
 	const history = useHistory();
 	const { currentTab } = useTabState();
 	const { setCurrentTab } = useTabActions();
-	const open = currentTab === value;
+	const open = currentTab.value === value;
 
 	const handleClick = () => {
-		setCurrentTab(value);
+		setCurrentTab({ title, value });
 		history.push(`/${value}`);
 	};
 

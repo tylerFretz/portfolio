@@ -8,7 +8,7 @@ import { useTabState, useTabActions } from '../contexts/TabContext';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		width: '100%',
+		width: '4vw',
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
 		userSelect: 'none',
 		'&:hover': {
 			background: 'rgba(250, 249, 249, 0.05)'
+		},
+		[theme.breakpoints.down('sm')]: {
+			width: '10vw'
 		}
 	},
 	logo: {
@@ -27,11 +30,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 interface TabProps {
+	title: string,
 	value: string,
 	logoSrc: string | undefined,
 }
 
 const Tab = ({
+	title,
 	value,
 	logoSrc,
 }: TabProps) => {
@@ -39,10 +44,10 @@ const Tab = ({
 	const history = useHistory();
 	const { currentTab } = useTabState();
 	const { setCurrentTab } = useTabActions();
-	const open = currentTab === value;
+	const open = currentTab.value === value;
 
 	const handleClick = () => {
-		setCurrentTab(value);
+		setCurrentTab({ title, value });
 		history.push(`/${value}`);
 	};
 
@@ -50,7 +55,7 @@ const Tab = ({
 		<div
 			className={classes.root}
 			onClick={handleClick}
-			style={{ borderLeft: open ? '1px solid #FFD700' : '1px solid #1F2428' }}>
+			style={{ borderLeft: open ? '1px solid #FFD700' : '' }}>
 			<img
 				className={classes.logo}
 				style={{ opacity: open ? 1 : 0.5 }}

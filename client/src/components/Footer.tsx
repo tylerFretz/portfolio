@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
 import checkmarkIcon from '../assets/checkmarkIcon.svg';
 import errorsIcon from '../assets/errorsIcon.svg';
 import warningsIcon from '../assets/warningsIcon.svg';
@@ -10,15 +11,18 @@ import codeBranchIcon from '../assets/codeBranchIcon.svg';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		width: '100vw',
-		height: '2vh',
+		height: '2.5vh',
 		background: '#5677DB',
 		color: '#FFF',
 		display: 'flex',
 		justifyContent: 'space-between',
 		borderTop: '1px solid #112121',
-		padding: '0 .5rem',
+		padding: '0.5rem .5rem',
 		overflow: 'hidden',
 		userSelect: 'none',
+		[theme.breakpoints.down('sm')]: {
+			height: '3vh',
+		}
 	},
 	subContainer: {
 		display: 'flex',
@@ -30,8 +34,12 @@ const useStyles = makeStyles((theme) => ({
 		margin: '0 .3rem',
 		padding: '0 .4rem',
 		fontSize: '.8rem',
+		lineHeight: 0,
 		'&:hover': {
 			background: '#539FD9'
+		},
+		[theme.breakpoints.down('sm')]: {
+			margin: 0
 		}
 	},
 	icon: {
@@ -77,9 +85,11 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className={classes.subContainer}>
-				<div className={classes.tab}>
-					<p>TypeScript React</p>
-				</div>
+				<Hidden smDown>
+					<div className={classes.tab}>
+						<p>TypeScript React</p>
+					</div>
+				</Hidden>
 				<div className={classes.tab}>
 					<img
 						className={classes.icon}
