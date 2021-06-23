@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import TitleBar from './components/TitleBar';
 import TabContainer from './components/TabContainer';
@@ -12,6 +12,8 @@ import Projects from './pages/Projects';
 import GitHub from './pages/GitHub';
 import Contact from './pages/Contact';
 import Settings from './pages/Settings';
+
+import { useThemeState } from './contexts/ThemeContext';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -25,20 +27,21 @@ const useStyles = makeStyles((theme) => ({
 	},
 	main: {
 		width: '100%',
-		background: theme.palette.secondary.main
+		overflowY: 'scroll',
 	}
 }));
 
 function App() {
 	const classes = useStyles();
+	const { theme } = useThemeState();
 
 	return (
-		<>
+		<ThemeProvider theme={theme}>
 			<TitleBar />
 			<div className={classes.root}>
 				<TabContainer isSideBar={true} />
 				<Explorer />
-				<div className={classes.main}>
+				<div className={classes.main} style={{ background: theme.palette.secondary.main }}>
 					<Hidden smDown>
 						<TabContainer isSideBar={false} />
 					</Hidden>
@@ -53,7 +56,7 @@ function App() {
 				</div>
 			</div>
 			<Footer />
-		</>
+		</ThemeProvider>
 	);
 };
 

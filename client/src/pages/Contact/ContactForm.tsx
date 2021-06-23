@@ -9,9 +9,14 @@ import * as yup from 'yup';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		display: 'flex',
-		width: '60%',
 		flexDirection: 'column',
-		paddingLeft: '2rem'
+		paddingLeft: '2rem',
+		width: '55%',
+		color: '#FFF',
+		[theme.breakpoints.down('sm')]: {
+			width: '100%',
+			padding: 0
+		}
 	},
 	form: {
 		width: '100%',
@@ -23,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 const validationSchema = yup.object().shape({
 	firstName: yup.string().max(100).required('First name is required.'),
 	lastName: yup.string().max(100).required('Last name is required.'),
-	email: yup.string().max(100).required('Email is required.'),
+	email: yup.string().email().max(100).required('Email is required.'),
 	message: yup.string().max(3000).required('Message is required.')
 });
 
@@ -88,14 +93,13 @@ const ContactForm = () => {
 									fullWidth
 									required
 									multiline={true}
-									rows={3}
+									rows={4}
 								/>
 							</Grid>
 							<Grid item xs={12}>
 								<Button
 									type="submit"
 									variant="contained"
-									color="primary"
 									fullWidth
 									disabled={Object.entries(errors).length !== 0}
 								>

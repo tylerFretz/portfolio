@@ -1,23 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CssBaseLine from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/core/styles';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { TabContextProvider } from './contexts/TabContext';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import theme from './theme';
+import { ThemeContextProvider } from './contexts/ThemeContext';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ThemeProvider theme={theme}>
-			<TabContextProvider>
+		<TabContextProvider>
+			<ThemeContextProvider>
 				<Router>
 					<CssBaseLine />
 					<App />
 				</Router>
-			</TabContextProvider>
-		</ThemeProvider>
+			</ThemeContextProvider>
+		</TabContextProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );

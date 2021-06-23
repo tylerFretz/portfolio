@@ -52,7 +52,7 @@ const Tab = ({
 			onClick={handleClick}
 			style={{
 				backgroundColor: open ? theme.palette.secondary.main : theme.palette.primary.main,
-				borderTop: open ? '1px solid #FFD700' : '1px solid #1F2428'
+				borderTop: open ? '1px solid #FFD700' : ''
 			}}>
 			<img className={classes.logo} src={logoSrc} alt='tab icon' />
 			<p style={{ opacity: open ? 1 : 0.7, userSelect: 'none' }}>{title}</p>

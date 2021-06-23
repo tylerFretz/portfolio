@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: '0 .4rem',
 		fontSize: '.8rem',
 		lineHeight: 0,
+		cursor: 'pointer',
 		'&:hover': {
 			background: '#539FD9'
 		},
@@ -54,7 +55,7 @@ const Footer = () => {
 	const classes = useStyles();
 
 	return (
-		<div className={classes.root}>
+		<footer className={classes.root}>
 			<div className={classes.subContainer}>
 				<div className={classes.tab}>
 					<img
@@ -106,7 +107,7 @@ const Footer = () => {
 					/>
 				</div>
 			</div>
-		</div>
+		</footer>
 	);
 };
 
