@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
 		textTransform: 'uppercase',
 		fontSize: '.7rem',
 		letterSpacing: '1px',
-		marginBottom: '.75rem'
+		marginBottom: '.75rem',
+		userSelect: 'none'
 
 	},
 	header: {
@@ -35,7 +36,8 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		fontWeight: 500,
 		alignItems: 'center',
-		cursor: 'pointer'
+		cursor: 'pointer',
+		userSelect: 'none'
 	},
 	files: {
 		display: 'flex',
