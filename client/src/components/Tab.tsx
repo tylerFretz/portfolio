@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: 'center',
 		alignItems: 'center',
 		color: theme.palette.primary.contrastText,
-		height: theme.spacing(5),
+		height: theme.spacing(4.5),
 		cursor: 'pointer'
 	},
 	logo: {

@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import developer from '../../assets/developer.png';
+import { downloadResume } from '../../services/downloadService';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -76,7 +77,7 @@ const About = () => {
 				<img className={classes.image} src={developer} alt='developer' />
 				<Button
 					variant='contained'
-					onClick={() => console.log('clicked')}
+					onClick={() => downloadResume()}
 					className={classes.download}
 					endIcon={<GetAppIcon />}
 				>

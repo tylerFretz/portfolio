@@ -13,6 +13,7 @@ import codeIcon from '../assets/codeIcon.svg';
 import mailIcon from '../assets/mailIcon.svg';
 import accountsIcon from '../assets/accountsIcon.svg';
 import manageIcon from '../assets/manageIcon.svg';
+import jsonIcon from '../assets/jsonIcon.png';
 
 const useStyles = makeStyles((theme) => ({
 	tabsBar: {
@@ -41,7 +42,8 @@ const tabsBarTabs = [
 	{ title: 'about.html', value: 'about', logoSrc: htmlIcon },
 	{ title: 'contact.css', value: 'contact', logoSrc: cssIcon },
 	{ title: 'projects.ts', value: 'projects', logoSrc: tsIcon },
-	{ title: 'github.md', value: 'github', logoSrc: markDownIcon }
+	{ title: 'github.md', value: 'github', logoSrc: markDownIcon },
+	{ title: 'settings.json', value: 'settings', logoSrc: jsonIcon }
 ];
 
 const sideBarTopTabs = [

@@ -15,6 +15,7 @@
 		"@types/react": "^17.0.11",
 		"@types/react-dom": "^17.0.8",
 		"axios": "^0.21.1",
+		"downloadjs": "^1.4.7",
 		"formik": "^2.2.9",
 		"formik-material-ui": "^3.0.1",
 		"react": "^17.0.2",
@@ -55,6 +56,7 @@
 	},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.14.5",
+		"@types/downloadjs": "^1.4.2",
 		"@types/react-router-dom": "^5.1.7",
 		"eslint-config-airbnb": "18.2.1",
 		"eslint-config-airbnb-typescript": "12.3.1",
