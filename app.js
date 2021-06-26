@@ -22,8 +22,8 @@ app.use('/api/projects', projectsRouter);
 app.use('/api/contact', contactRouter);
 app.use('/api/download', downloadRouter);
 
-+app.get('/*', function (req, res) {
-	res.sendFile(path.join(__dirname, 'build', 'index.html'));
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 app.use(middleware.unknownEndpoint);
