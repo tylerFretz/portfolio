@@ -10,15 +10,8 @@ const requestLogger = (req, _res, next) => {
 };
 
 const unknownEndpoint = (req, res) => {
-	const documentPath = nodePath.join(__dirname, "../build", "index.html");
-	const documentExists = fs.existsSync(documentPath);
-
-	if (documentExists) {
-		res.sendFile(documentPath);
-	} else {
-		res.status(404).send({ error: `There is no resource at ${req.url}` });
-	}
-};
+	res.status(404).send({ error: 'unknown endpoint' })
+}
 
 
 const errorHandler = (err, _req, res, next) => {
