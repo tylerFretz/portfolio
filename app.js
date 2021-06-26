@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 require('express-async-errors');
 const cors = require('cors');
-const helmet = require('helmet');
 const middleware = require("./utils/middleware");
 const projectsRouter = require("./controllers/projects");
 const contactRouter = require("./controllers/contact");
@@ -11,7 +10,6 @@ const config = require("./utils/config");
 
 const app = express();
 
-app.use(helmet());
 app.use(cors());
 app.use(express.static('build'));
 app.use('/images', express.static('images'));
