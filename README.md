@@ -9,3 +9,4 @@ Live site available [here](http://www.tylerfretz.me)
 - working contact form using nodemailer
 - dynamic themeing
 - resume download
+- mobile responsiveness
