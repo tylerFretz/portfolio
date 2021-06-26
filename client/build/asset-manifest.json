@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.js": "/static/js/main.9072dfc3.chunk.js",
+    "main.js.map": "/static/js/main.9072dfc3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9aa1f86c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9aa1f86c.js.map",
+    "static/js/2.613dfcf2.chunk.js": "/static/js/2.613dfcf2.chunk.js",
+    "static/js/2.613dfcf2.chunk.js.map": "/static/js/2.613dfcf2.chunk.js.map",
+    "static/js/3.99193af2.chunk.js": "/static/js/3.99193af2.chunk.js",
+    "static/js/3.99193af2.chunk.js.map": "/static/js/3.99193af2.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.613dfcf2.chunk.js.LICENSE.txt": "/static/js/2.613dfcf2.chunk.js.LICENSE.txt",
+    "static/media/accountsIcon.5d13ceef.svg": "/static/media/accountsIcon.5d13ceef.svg",
+    "static/media/checkmarkIcon.92d5f89c.svg": "/static/media/checkmarkIcon.92d5f89c.svg",
+    "static/media/codeBranchIcon.c4d3f34f.svg": "/static/media/codeBranchIcon.c4d3f34f.svg",
+    "static/media/codeIcon.8c5fc060.svg": "/static/media/codeIcon.8c5fc060.svg",
+    "static/media/cssIcon.6f2be295.svg": "/static/media/cssIcon.6f2be295.svg",
+    "static/media/developer.ad02d638.png": "/static/media/developer.ad02d638.png",
+    "static/media/draculaImg.31b7434c.png": "/static/media/draculaImg.31b7434c.png",
+    "static/media/errorsIcon.83637498.svg": "/static/media/errorsIcon.83637498.svg",
+    "static/media/explorerIcon.22293ddb.svg": "/static/media/explorerIcon.22293ddb.svg",
+    "static/media/htmlIcon.b757b110.jpg": "/static/media/htmlIcon.b757b110.jpg",
+    "static/media/lightImg.f08f9a7c.png": "/static/media/lightImg.f08f9a7c.png",
+    "static/media/mailIcon.c22679fe.svg": "/static/media/mailIcon.c22679fe.svg",
+    "static/media/manageIcon.e994d1b2.svg": "/static/media/manageIcon.e994d1b2.svg",
+    "static/media/me.1a068c2e.jpg": "/static/media/me.1a068c2e.jpg",
+    "static/media/monokaiImg.eca9a942.png": "/static/media/monokaiImg.eca9a942.png",
+    "static/media/notificationsIcon.b638bc7d.svg": "/static/media/notificationsIcon.b638bc7d.svg",
+    "static/media/openChangesIcon.00f1390b.svg": "/static/media/openChangesIcon.00f1390b.svg",
+    "static/media/reactIcon.9b5ce199.svg": "/static/media/reactIcon.9b5ce199.svg",
+    "static/media/vsCodeLogo.b8b1e001.svg": "/static/media/vsCodeLogo.b8b1e001.svg",
+    "static/media/warningsIcon.a4076de9.svg": "/static/media/warningsIcon.a4076de9.svg",
+    "static/media/worldMap.9a48c228.svg": "/static/media/worldMap.9a48c228.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9aa1f86c.js",
+    "static/js/2.613dfcf2.chunk.js",
+    "static/js/main.9072dfc3.chunk.js"
+  ]
+}
