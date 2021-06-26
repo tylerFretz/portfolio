@@ -12,7 +12,7 @@ const app = express();
 
 app.use(helmet());
 app.use(cors());
-app.use(express.static('build'));
+app.use('/', express.static('build'));
 app.use('/images', express.static('images'));
 app.use(express.json());
 app.use(middleware.requestLogger);
