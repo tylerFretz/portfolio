@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
+import LinkIcon from '@material-ui/icons/Link';
 import codeIcon from '../../assets/codeIcon.svg';
 
 const useStyles = makeStyles((theme) => ({
@@ -73,12 +73,12 @@ const ProjectDescription = (
 				))}
 			</ul>
 			<div className={classes.linkContainter}>
-				<img src={codeIcon} alt='view code' />
+				<img src={codeIcon} alt='view code' style={{ width: '24px', height: '24px' }} />
 				<a href={gitHubUrl} className={classes.link}>View code in GitHub</a>
 			</div>
 			{url && (
 				<div className={classes.linkContainter}>
-					<OpenInBrowserIcon />
+					<LinkIcon />
 					<a href={url} className={classes.link}>View live app</a>
 				</div>
 			)}

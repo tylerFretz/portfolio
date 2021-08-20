@@ -4,14 +4,16 @@ const projects = [
 		"description": "CRUD app that allows users to upload and find new recipes",
 		"gitHubUrl": "https://github.com/tylerFretz/recipe-app-js/",
 		"images": ["../../images/recipeApp.gif"],
-		"technologies": ["JavaScript", "MongoDb", "Express", "React", "Node.js", "Jest", "Git"]
+		"technologies": ["JavaScript", "MongoDb", "Express", "React", "Node.js", "Jest", "Git"],
+		"url": "https://fathomless-hamlet-32500.herokuapp.com/"
 	},
 	{
 		"name": "Sorting Algorithms Visualizer",
 		"description": "Progessive Web App that visualizes common sorting algorithms",
 		"gitHubUrl": "https://github.com/tylerFretz/sorting-algorithms-visualizer/",
 		"images": ["../../images/sortingApp.gif",],
-		"technologies": ["React", "TypeScript", "Git"]
+		"technologies": ["React", "TypeScript", "Git"],
+		"url": "https://jovial-jang-92478f.netlify.app/"
 	},
 	{
 		"name": "Rate Repository App",
