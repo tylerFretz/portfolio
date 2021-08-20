@@ -7,7 +7,6 @@ const contactRouter = require('express').Router();
 
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
-	host: 'smtp.gmail.com',
 	auth: {
 		user: config.SMTP_USER,
 		pass: config.SMTP_PASS
@@ -24,7 +23,7 @@ contactRouter.post('/',
 		const { body } = req;
 
 		transporter.sendMail({
-			from: body.email,
+			from: config.SMTP_USER,
 			to: 'fretztyler@gmail.com',
 			subject: 'Portfolio contact',
 			html: `<h3>Name: ${body.firstName} ${body.lastName}</h3>
