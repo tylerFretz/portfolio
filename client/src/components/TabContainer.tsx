@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Tab from './Tab';
 import SideBarTab from './SideBarTab';
 import reactIcon from '../assets/reactIcon.svg';
-import htmlIcon from '../assets/htmlIcon.jpg';
+import htmlIcon from '../assets/htmlIcon.png';
 import cssIcon from '../assets/cssIcon.svg';
 import tsIcon from '../assets/tsIcon.png';
 import explorerIcon from '../assets/explorerIcon.svg';

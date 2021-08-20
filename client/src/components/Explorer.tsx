@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import reactIcon from '../assets/reactIcon.svg';
-import htmlIcon from '../assets/htmlIcon.jpg';
+import htmlIcon from '../assets/htmlIcon.png';
 import cssIcon from '../assets/cssIcon.svg';
 import tsIcon from '../assets/tsIcon.png';
 import ExplorerTab from './ExplorerTab';

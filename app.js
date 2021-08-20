@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression');
 const path = require('path');
 require('express-async-errors');
 const cors = require('cors');
@@ -10,6 +11,7 @@ const config = require("./utils/config");
 
 const app = express();
 
+app.use(compression());
 app.use(cors());
 app.use(express.static('build'));
 app.use('/images', express.static('images'));
