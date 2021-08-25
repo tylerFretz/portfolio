@@ -8,7 +8,6 @@ const contactRouter = require('express').Router();
 const transporter = nodemailer.createTransport({
 	host: 'smtp.gmail.com',
 	port: 587,
-	secure: true,
 	auth: {
 		user: config.SMTP_USER,
 		pass: config.SMTP_PASS
