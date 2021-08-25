@@ -6,7 +6,6 @@ const contactRouter = require('express').Router();
 // https://stackoverflow.com/questions/19877246/nodemailer-with-gmail-and-nodejs
 
 const transporter = nodemailer.createTransport({
-	service: 'gmail',
 	auth: {
 		user: config.SMTP_USER,
 		pass: config.SMTP_PASS
