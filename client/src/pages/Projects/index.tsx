@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
 		alignItems: 'center'
 	},
 	gif: {
-		width: theme.spacing(80),
 		marginTop: '3rem',
 		padding: '.25rem',
 		background: '#f9826c'

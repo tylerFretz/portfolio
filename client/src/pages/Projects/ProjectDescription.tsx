@@ -12,7 +12,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	label: {
 		color: '#f9826c',
-		marginRight: '.5rem'
+		marginRight: '.5rem',
+		fontSize: '1rem'
 	},
 	list: {
 		listStyle: 'none',
