@@ -18,6 +18,7 @@ const transporter = nodemailer.createTransport({
 	}
 });
 
+
 contactRouter.post('/',
 	body('firstName').not().isEmpty().trim().escape(),
 	body('lastName').not().isEmpty().trim().escape(),
