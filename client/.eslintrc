@@ -104,8 +104,5 @@
 		}
 	},
 	"parser": "@typescript-eslint/parser",
-	"parserOptions": {
-		"project": "./client/tsconfig.json"
-	},
 	"ignorePatterns": ".eslintrc"
 }

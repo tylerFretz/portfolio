@@ -9,7 +9,7 @@ const projects = [
 	},
 	{
 		"name": "Sorting Algorithms Visualizer",
-		"description": "A visualization app for various sorting algorithms like merge sort, quick sort, insertion sort, bubble sort and selection sort. Originally was using Redux to maintain the state of the sorted array but this proved unsuitable for the task because of the asynchronous nature of accessing the store. Changed strategy to sorting the array on page load / on user options change and saving a snapshot of the array at each step. Visualization iterates over these snapshots.",
+		"description": "A visualization app for various sorting algorithms like merge sort, quick sort, insertion sort, bubble sort and selection sort. Originally was using Redux to maintain the state of the sorted array but this proved unsuitable for the task because of the asynchronous nature of accessing the store. Changed strategy to sorting the array on page load / on user options change and saving a snapshot of the array at each step of sorting. Visualization iterates over these snapshots.",
 		"gitHubUrl": "https://github.com/tylerFretz/sorting-algorithms-visualizer/",
 		"images": ["../../images/sortingApp.gif"],
 		"technologies": ["React", "TypeScript", "Material UI", "GitHub Actions", "Git"],
