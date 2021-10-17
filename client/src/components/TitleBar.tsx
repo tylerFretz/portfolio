@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: '0.85rem',
 		borderBottom: '1px solid #112121',
 		[theme.breakpoints.down('sm')]: {
-			height: '4vh',
+			height: '5vh',
+			fontSize: '1rem'
 		}
 	},
 	logo: {

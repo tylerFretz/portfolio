@@ -52,7 +52,7 @@ const Settings = () => {
 				<Grid container spacing={3} className={classes.grid}>
 					{themes.map((theme, i) => (
 						<Grid item xs={3} key={theme.name}>
-							<div className={classes.themeContainer}>
+							<div className={classes.themeContainer} >
 								<div className={classes.iconContainer}>
 									<img className={classes.icon} src={theme.image} alt='' />
 								</div>

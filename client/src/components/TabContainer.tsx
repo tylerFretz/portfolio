@@ -29,8 +29,9 @@ const useStyles = makeStyles((theme) => ({
 		alignItems: 'center',
 		background: theme.palette.secondary.main,
 		[theme.breakpoints.down('sm')]: {
-			width: '10vw',
-			borderRight: '1px solid #112121'
+			width: '14vw',
+			borderRight: '1px solid #112121',
+			paddingBottom: '2rem'
 		}
 	}
 }));

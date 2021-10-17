@@ -7,7 +7,10 @@ import ProjectDescription from './ProjectDescription';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		padding: '2rem'
+		padding: '2rem',
+		[theme.breakpoints.down('sm')]: {
+			padding: '1rem 0'
+		}
 	},
 	carouselItem: {
 		display: 'flex',
@@ -69,6 +72,14 @@ const Projects = () => {
 					animation='slide'
 					indicators={false}
 					navButtonsAlwaysVisible={true}
+					swipe={true}
+					navButtonsProps={{
+						className: 'Carousel-buttonVisible',
+						style: {
+							top: 0,
+							margin: 0
+						}
+					}}
 				>
 					{projects.map((p) => (
 						<div className={classes.carouselItem} key={p.name}>

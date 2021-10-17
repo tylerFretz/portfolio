@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 		background: theme.palette.primary.main,
 		height: '94.5vh',
 		[theme.breakpoints.down('sm')]: {
-			height: '93vh',
+			height: '92vh',
 			borderRight: '1px solid #112121'
 		}
 	},

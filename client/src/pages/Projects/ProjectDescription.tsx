@@ -1,19 +1,21 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import LinkIcon from '@material-ui/icons/Link';
-import codeIcon from '../../assets/codeIcon.svg';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
 		width: '90%',
 		padding: '2rem 2rem',
 		background: 'linear-gradient(55deg,rgba(0,0,0,.22),hsla(0,0%,100%,.25))',
-		color: theme.palette.secondary.contrastText
+		color: theme.palette.secondary.contrastText,
+		borderRadius: '5px',
+		boxShadow: '-0.1rem 0 1.5rem #000'
 	},
 	label: {
 		color: '#f9826c',
 		marginRight: '.5rem',
-		fontSize: '1rem'
+		fontSize: '1.2rem'
 	},
 	list: {
 		listStyle: 'none',
@@ -28,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	linkContainter: {
 		display: 'flex',
-		alignItems: 'center'
+		alignItems: 'center',
+		marginBottom: '1rem'
 	},
 	link: {
 		textDecoration: 'none',
@@ -74,12 +77,12 @@ const ProjectDescription = (
 				))}
 			</ul>
 			<div className={classes.linkContainter}>
-				<img src={codeIcon} alt='view code' style={{ width: '24px', height: '24px' }} />
+				<GitHubIcon fontSize="large" />
 				<a href={gitHubUrl} className={classes.link}>View code in GitHub</a>
 			</div>
 			{url && (
 				<div className={classes.linkContainter}>
-					<LinkIcon />
+					<LinkIcon fontSize="large" />
 					<a href={url} className={classes.link}>View live app</a>
 				</div>
 			)}

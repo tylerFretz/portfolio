@@ -7,7 +7,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js",
+		"start": "cross-env NODE_ENV=production node index.js",
 		"dev": "nodemon index.js",
 		"deploy": "git push heroku master",
 		"build:ui": "rm -rf build && cd ./client && npm run build --prod && cp -r build ../",
@@ -28,6 +28,7 @@
 		"nodemailer": "^6.6.2"
 	},
 	"devDependencies": {
+		"cross-env": "^7.0.3",
 		"eslint": "^7.29.0",
 		"nodemon": "^2.0.7"
 	}

@@ -18,13 +18,17 @@ const useStyles = makeStyles((theme) => ({
 		userSelect: 'none',
 		[theme.breakpoints.down('sm')]: {
 			flexDirection: 'column',
-			alignItems: 'center'
+			alignItems: 'center',
+			padding: '1rem 1rem'
 		}
 	},
 	textContainer: {
 		padding: '1rem 2rem',
 		flex: '1 1',
-		fontSize: '1.2rem'
+		fontSize: '1.2rem',
+		[theme.breakpoints.down('sm')]: {
+			padding: '1rem 0'
+		}
 	},
 	imageContainer: {
 		display: 'flex',

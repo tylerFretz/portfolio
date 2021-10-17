@@ -63,7 +63,7 @@ const ContactForm = () => {
 			alert('Message Sent!');
 		} else {
 			// eslint-disable-next-line no-alert
-			alert('There was an error sending the message :(');
+			alert('There was an error sending the message :(. Nodemailer is a pain.');
 		}
 	};
 
@@ -80,6 +80,7 @@ const ContactForm = () => {
 			>
 				{({ values, errors }) => (
 					<Form className={classes.form}>
+						<h2>Send me a message</h2>
 						<Grid container spacing={2}>
 							<Grid item xs={12}>
 								<Field
