@@ -16,6 +16,14 @@ const projects = [
 		"url": "https://jovial-jang-92478f.netlify.app/"
 	},
 	{
+		"name": "Spacestagram",
+		"description": "Displays the most recent photos from NASA's Astronomy Picture of the Day. Allows users to vote on their favourite photos. I decided to use FingerPrintJS to identify users as forcing users to create an account in order to be able to track their vote seemed like overkill for a simple app such as this.",
+		"gitHubUrl": "https://github.com/tylerFretz/spacestagram/",
+		"images": ['../../images/spacestagramDemo.gif'],
+		"technologies": ["React", "TypeScript", "MongoDB", "Jest", "React Spring", "React Query"],
+		"url": "https://spacestagram-tf.herokuapp.com/"
+	}
+	{
 		"name": "Rate Repository App",
 		"description": "Multiplatform mobile app for rating GitHub repositories and finding new / popular repositories. Repository data is accessed through GitHub's REST API.",
 		"gitHubUrl": "https://github.com/tylerFretz/rate-git-repository-app",
