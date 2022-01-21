@@ -62,7 +62,7 @@ const ProjectDescription = (
 
 	return (
 		<div className={classes.root}>
-			<p>
+			<p style={{ fontSize: '1.1rem' }}>
 				<strong className={classes.label}>Name: </strong>
 				{name}
 			</p>

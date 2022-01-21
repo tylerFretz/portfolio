@@ -22,7 +22,7 @@ const projects = [
 		"images": ['../../images/spacestagramDemo.gif'],
 		"technologies": ["React", "TypeScript", "MongoDB", "Jest", "React Spring", "React Query"],
 		"url": "https://spacestagram-tf.herokuapp.com/"
-	}
+	},
 	{
 		"name": "Rate Repository App",
 		"description": "Multiplatform mobile app for rating GitHub repositories and finding new / popular repositories. Repository data is accessed through GitHub's REST API.",

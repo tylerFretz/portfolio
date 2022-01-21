@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
 	gif: {
 		marginTop: '3rem',
 		padding: '.25rem',
+		maxWidth: '90vw',
 		background: '#f9826c'
 	},
 	imageContainer: {
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 		margin: '0 2rem',
 		padding: '.25rem',
 		background: '#f9826c',
-		width: theme.spacing(30),
+		maxWidth: '90vw',
 		[theme.breakpoints.down('sm')]: {
 			margin: '1rem 0'
 		}
