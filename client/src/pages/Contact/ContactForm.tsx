@@ -63,7 +63,7 @@ const ContactForm = () => {
 			alert('Message Sent!');
 		} else {
 			// eslint-disable-next-line no-alert
-			alert('There was an error sending the message :(. Nodemailer is a pain.');
+			alert('There was an error sending the message :(');
 		}
 	};
 

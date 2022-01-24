@@ -1,7 +1,7 @@
 const { body } = require('express-validator');
 const config = require('../utils/config');
 const contactRouter = require('express').Router();
-import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
+const { SESClient, SendEmailCommand } = require('@aws-sdk/client-ses');
 
 const sesClient = new SESClient({ region: 'us-east-1' });
 
