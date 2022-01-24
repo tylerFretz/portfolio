@@ -1,9 +1,20 @@
-const { body } = require('express-validator');
+const nodemailer = require('nodemailer');
 const config = require('../utils/config');
+const AWS = require('aws-sdk');
+const { body } = require('express-validator');
 const contactRouter = require('express').Router();
-const { SESClient, SendEmailCommand } = require('@aws-sdk/client-ses');
 
-const sesClient = new SESClient({ region: 'us-east-1' });
+AWS.config.update({
+	accessKeyId: config.SMTP_USER,
+	secretAccessKey: config.SMTP_PASS,
+	region: 'us-east-2',
+});
+
+const transporter = nodemailer.createTransport({
+	SES: new AWS.SES({
+	  apiVersion: '2010-12-01'
+	})
+});
 
 contactRouter.post('/',
 	body('firstName').not().isEmpty().trim().escape(),
@@ -13,33 +24,20 @@ contactRouter.post('/',
 	async (req, res) => {
 		const { body } = req;
 
-		const params = {
-			Destination: {
-				ToAddresses: [ config.SMTP_USER ]
-			},
-			Message: {
-				Body: {
-					Html: {
-						Charset: 'UTF-8',
-						Data: `<h3>Name: ${body.firstName} ${body.lastName}</h3>
-						<h3>Email: ${body.email}</h3>
-						<p>Message: ${body.message}</p>`
-					}
-				},
-				Subject: {
-					Charset: 'UTF-8',
-					Data: 'Portfolio contact'
-				}
-			},
-			Source: config.SMTP_USER
-		};
-
 		try {
-			const data = await sesClient.send(new SendEmailCommand(params));
-			res.json({ status: 'Message sent' });
+			transporter.sendMail({
+				from: 'fretztyler@gmail.com',
+				to: 'fretztyler@gmail.com',
+				subject: 'Profile Contact',
+				text: `First name: ${body.firstName}\nLast name: ${body.lastName}\nEmail: ${body.email}\nMessage: ${body.message}`
+			  }, (err, info) => {
+				console.log(info.envelope);
+				console.log(info.messageId);
+			  });
+			  res.sendStatus(200);
 		} catch (err) {
 			console.log(err);
-			res.json({ status: "Error sending message" });
+			res.sendStatus(500);
 		}
 });
 

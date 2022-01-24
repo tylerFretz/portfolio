@@ -57,14 +57,7 @@ const ContactForm = () => {
 			email: values.email,
 			message: values.message
 		};
-		const data = await sendEmail(newEmail);
-		if (data.status === 'Message Sent') {
-			// eslint-disable-next-line no-alert
-			alert('Message Sent!');
-		} else {
-			// eslint-disable-next-line no-alert
-			alert('There was an error sending the message :(');
-		}
+		await sendEmail(newEmail);
 	};
 
 	return (
