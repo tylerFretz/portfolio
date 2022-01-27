@@ -57,7 +57,9 @@ const ContactForm = () => {
 			email: values.email,
 			message: values.message
 		};
-		await sendEmail(newEmail);
+		await sendEmail(newEmail)
+			.then(res => res.status === 200 ? alert('Message sent!') : alert('Error sending message'))
+			.catch(err => console.error(err));
 	};
 
 	return (

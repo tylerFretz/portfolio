@@ -12,5 +12,5 @@ interface Mail {
 export const sendEmail = async (mailObject: Mail) => {
 	const req = axios.post(BASE_URL, mailObject);
 	const res = await req;
-	return res.data;
+	return res;
 };
