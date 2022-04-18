@@ -29,7 +29,7 @@ contactRouter.post('/',
 				from: 'fretztyler@gmail.com',
 				to: 'fretztyler@gmail.com',
 				subject: 'Profile Contact',
-				text: `First name: ${body.firstName}\nLast name: ${body.lastName}\nEmail: ${body.email}\nMessage: ${body.message}`
+				text: `First name: ${body.firstName}\n\nLast name: ${body.lastName}\n\nEmail: ${body.email}\n\nMessage: ${body.message}`
 			  }, (err, info) => {
 				console.log(info.envelope);
 				console.log(info.messageId);
